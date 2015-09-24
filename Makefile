@@ -2,7 +2,7 @@
 .PHONY: css
 css:
 	mkdir -p bundle
-	postcss --watch --use autoprefixer --use postcss-import css/app.css --output bundle/app.css
+	./node_modules/.bin/postcss --watch --use autoprefixer --use postcss-import css/app.css --output bundle/app.css
 
 .phony: server
 server:
