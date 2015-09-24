@@ -70,6 +70,7 @@ a:hover {
   padding: 0 10px;
   font-size: 24px;
 }
+
 .second {
   flex-direction: row;
   /*align-items: stretch;*/
@@ -124,3 +125,15 @@ a:hover {
 #slider-control .active .dot {
   background-color: #fff;
 }
+
+#native {
+  height: 100%;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(31,30,52,1));
+}
+
