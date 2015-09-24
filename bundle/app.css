@@ -554,3 +554,16 @@ a:hover {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+
+.android {
+  overflow: hidden;
+}
+
+#android-robot {
+  position: absolute;
+  right: -109px;
+  bottom: -120px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
