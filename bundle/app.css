@@ -570,14 +570,14 @@ a:hover {
 }
 
 #slider-control {
-  padding: 3px;
+  padding: 5px;
   position: fixed;
   right: 0;
   top: 50%;
 }
 
 #slider-control a {
-  padding: 3px;
+  padding: 5px;
 }
 
 #slider-control .dot {
@@ -609,9 +609,9 @@ a:hover {
 
 .react-logo {
   position: absolute;
-  top: 100%;
+  top: 180px;
   left: 50%;
-  -webkit-transform: translate(-50%, -100%);
-      -ms-transform: translate(-50%, -100%);
-          transform: translate(-50%, -100%);
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
 }

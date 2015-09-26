@@ -14,19 +14,20 @@ window.onscroll = function() {
 
 function animateRobot() {
   var t = new TimelineMax({yoyo: true, repeat: -1});
-  t.to("#android-robot",1,{rotation: "-=15deg"});
+  t.to("#android-robot",0.5,{rotation: "-50deg"})
+    .to("#android-robot",0.5,{rotation: "-40deg"});
 }
 
 function animateLogo() {
   TweenMax.fromTo(".react-logo",3, {
       // from
       css: {
-        y: "-300px",
+        y: "20px",
       }
     },{
       // to
       css: {
-        y: "-250px",
+        y: "50px",
       },
 
       // option to repeat animation forever
@@ -49,7 +50,7 @@ function updateSliderControl() {
 
     var section = document.getElementById(sectionName);
     var sectionTop = section.offsetTop;
-    var sectionBottom = section.offsetTop + section.clientHeight;
+    var sectionBottom = section.offsetTop + section.offsetHeight;
 
     // Check if window.scrollY is between the section.
     var scrolly = Math.round(window.scrollY);
@@ -91,6 +92,7 @@ function addSmoothScrolling() {
         event.preventDefault();
         var sectionId = link.attributes[0].value.substring(1);
         scrollToElement(sectionId);
+        return false;
       })
     })(link);
   }
