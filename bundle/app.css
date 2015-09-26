@@ -591,7 +591,7 @@ a:hover {
 #slider-control {
   padding: 5px;
   position: fixed;
-  right: 0;
+  right: 20px;
   top: 50%;
 }
 

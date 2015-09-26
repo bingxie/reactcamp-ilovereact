@@ -50,7 +50,7 @@ function updateSliderControl() {
 
     var section = document.getElementById(sectionName);
     var sectionTop = section.offsetTop;
-    var sectionBottom = section.offsetTop + section.offsetHeight;
+    var sectionBottom = section.offsetTop + window.innerHeight;
 
     // Check if window.scrollY is between the section.
     var scrolly = Math.round(window.scrollY);
