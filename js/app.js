@@ -4,6 +4,8 @@ window.onload = function() {
   animateRobot();
 
   updateSliderControl();
+
+  addSmoothScrolling();
 }
 
 window.onscroll = function() {
@@ -51,11 +53,45 @@ function updateSliderControl() {
 
     // Check if window.scrollY is between the section.
     var scrolly = Math.round(window.scrollY);
+    console.log(scrolly);
+    console.log(sectionTop);
+    console.log(sectionBottom);
+
     if(scrolly >= sectionTop && scrolly < sectionBottom) {
       link.className = "active";
     } else {
       link.className = "";
     }
 
+  }
+}
+
+function scrollToElement(elementId) {
+  var element = document.getElementById(elementId);
+  var topOfElement = element.offsetTop;
+
+  TweenMax.to(window, 1, {
+    scrollTo: {
+      y: topOfElement,
+    },
+
+    ease: Power2.easeInOut
+  });
+}
+
+function addSmoothScrolling() {
+  var links = document.querySelectorAll("#slider-control a");
+
+  for(var i = 0; i < links.length; i++) {
+    var link = links[i];
+
+    (function(link) {
+      link.addEventListener("click",function(event) {
+      // `event` is the mouse click event
+        event.preventDefault();
+        var sectionId = link.attributes[0].value.substring(1);
+        scrollToElement(sectionId);
+      })
+    })(link);
   }
 }
