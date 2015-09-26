@@ -55,11 +55,30 @@ a:hover {
   text-decoration: none;
 }
 
+/************************ app */
+
 .section {
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 100%;
   /*height: 100vh;*/
+}
+
+#intro-section {
+  flex-direction: column;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(31,30,52,1));
 }
 
 .nav {
@@ -69,11 +88,6 @@ a:hover {
 .nav a {
   padding: 0 10px;
   font-size: 24px;
-}
-
-.second {
-  flex-direction: row;
-  /*align-items: stretch;*/
 }
 
 .iphone-demo,.feature-description {
@@ -124,26 +138,4 @@ a:hover {
 
 #slider-control .active .dot {
   background-color: #fff;
-}
-
-#native {
-  height: 100%;
-  background-image: url(../img/background.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.overlay {
-  background-image: linear-gradient(rgba(0,0,0,0),rgba(31,30,52,1));
-}
-
-.logo {
-  position: relative;
-}
-
-.react-logo {
-  position: absolute;
-  top: 180px;
-  left: 50%;
-  transform: translate(-50%, 0%);
 }

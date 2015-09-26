@@ -19,15 +19,15 @@ function animateRobot() {
 }
 
 function animateLogo() {
-  TweenMax.fromTo(".react-logo",3, {
+  TweenMax.fromTo(".logo",3, {
       // from
       css: {
-        y: "20px",
+        y: "-20px",
       }
     },{
       // to
       css: {
-        y: "50px",
+        y: "20px",
       },
 
       // option to repeat animation forever
