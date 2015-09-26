@@ -1,17 +1,24 @@
 window.onload = function() {
   animateLogo();
+
+  animateRobot();
+}
+
+function animateRobot() {
+  var t = new TimelineMax({yoyo: true, repeat: -1});
+  t.to("#android-robot",1,{rotation: "-=15deg"});
 }
 
 function animateLogo() {
   TweenMax.fromTo(".react-logo",3, {
       // from
       css: {
-        top: "-20px",
+        y: "-300px",
       }
     },{
       // to
       css: {
-        top: "10px",
+        y: "-250px",
       },
 
       // option to repeat animation forever
@@ -20,7 +27,7 @@ function animateLogo() {
       // option to reverse the animation and rerun
       yoyo: true,
 
-      ease: Power2.easeInOut,
+      ease: Power2.easeInOut
     }
   );
 }
